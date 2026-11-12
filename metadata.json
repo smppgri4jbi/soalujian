@@ -1,0 +1,6 @@
+{
+  "name": "BankSoal SMP - Generator Ujian & Cetak PDF Otomatis",
+  "description": "Platform penyusunan naskah ujian SMP Kelas 7, 8, 9 terpadu dengan bank soal Kurikulum Merdeka & K13, kunci jawaban, pembahasan otomatis, dan cetak naskah PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

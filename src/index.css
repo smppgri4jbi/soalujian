@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Formal Exam Print Styles */
+@media print {
+  /* Hide all non-printable interactive web UI */
+  .no-print,
+  nav,
+  header,
+  aside,
+  button,
+  .toast,
+  .modal-backdrop {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Times New Roman', Times, serif, 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+
+  .print-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .kop-surat-border {
+    border-bottom: 3px double #000000 !important;
+  }
+
+  /* Two-column layout in print if enabled */
+  .print-columns {
+    column-count: 2;
+    column-gap: 20mm;
+    column-rule: 1px solid #d1d5db;
+  }
+}
+
+/* Screen Exam Paper Preview simulation */
+.exam-paper-preview {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.kop-double-line {
+  border-bottom: 3px double #1e293b;
+}
